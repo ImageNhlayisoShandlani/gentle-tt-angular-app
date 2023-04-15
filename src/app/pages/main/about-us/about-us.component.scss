@@ -1,0 +1,233 @@
+$primary-color: #db5c87;
+$secondary-color: #db715c;
+$alt-color: #db5cc6;
+$info-text: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+$heading-text: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+  "Lucida Sans", Arial, sans-serif;
+
+#two-step-about {
+  width: 100%;
+  height: 95vh;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 100%;
+
+  img {
+    width: 100%;
+    height: 100%;
+  }
+
+  .right-about {
+    width: 100%;
+    height: 100%;
+    background: $primary-color;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    div {
+      width: 90%;
+      height: 80%;
+
+      h2 {
+        margin-bottom: 2rem;
+        font-family: $heading-text;
+        color: #ebe8e8;
+      }
+
+      p {
+        font-style: italic;
+        font-family: $info-text;
+        color: #e7dbdb;
+
+        fa-icon {
+          color: #474646;
+        }
+      }
+
+      button {
+        height: 3rem;
+        color: $primary-color;
+        border: 1px solid #474646;
+        font-weight: bold;
+        font-family: $info-text;
+      }
+    }
+  }
+}
+
+#mid-about {
+  width: 100%;
+  height: 105vh;
+  background: url(../../../../assets/extra-pictures/8.jpg) no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  margin-top: -5.5rem;
+
+  #cover-about {
+    background: #1f1e1eb0;
+    width: 100%;
+    height: 100%;
+
+    h1 {
+      color: #d1c6c6;
+    }
+
+    #the-mid-wrap {
+      width: 90%;
+      height: 70%;
+      margin-left: 5%;
+      display: grid;
+      grid-template-columns: 50% 50%;
+      grid-template-rows: 50% 50%;
+      gap: 2rem;
+      row-gap: 4rem;
+      .single-values {
+        margin-bottom: 1.5rem;
+      }
+      fa-icon {
+        color: $primary-color;
+        font-size: 2.2rem;
+      }
+
+      h3 {
+        color: #ebe8e8;
+        font-family: $heading-text;
+      }
+
+      p {
+        font-family: $info-text;
+        font-style: italic;
+        color: #d1c6c6;
+
+        i {
+          color: $secondary-color;
+          font-size: 2rem;
+        }
+      }
+    }
+  }
+}
+
+#team {
+  width: 100%;
+  height: fit-content;
+  margin-bottom: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+
+  .single-team {
+    width: 28%;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px,
+      rgba(0, 0, 0, 0.05) 0px 5px 10px;
+
+    img {
+      width: 100%;
+      height: 75%;
+    }
+
+    div {
+      width: 100%;
+      height: 25%;
+      background: $secondary-color;
+      padding-left: 2rem;
+
+      h4 {
+        color: #f0ebeb;
+        font-family: $heading-text;
+        font-style: italic;
+      }
+
+      p {
+        font-family: $info-text;
+        color: #383535;
+        font-weight: bold;
+      }
+    }
+  }
+}
+
+/** Smart Phone Portrait */
+
+@media (min-width: 280px) and (max-width: 525px) and (orientation: portrait) {
+  #two-step-about {
+    height: 152vh !important;
+    grid-template-columns: 100% !important;
+    grid-template-rows: 25% 75% !important;
+  }
+
+  #mid-about {
+    height: 180vh !important;
+  }
+  #cover-about h1 {
+    font-size: 0.9rem !important;
+  }
+
+  #cover-about #the-mid-wrap {
+    grid-template-columns: 100% !important;
+    grid-template-rows: 25% 25% 25% 25% !important;
+  }
+
+  #team {
+    justify-content: center !important;
+    flex-direction: column;
+
+    .single-team {
+      width: 95% !important;
+      margin-bottom: 2rem !important;
+    }
+  }
+}
+
+/** SmartPhones lanscape mode */
+
+@media (min-width: 526px) and (max-width: 760px) and (orientation: landscape) {
+  #two-step-about {
+    height: 230vh !important;
+    grid-template-columns: 100% !important;
+    grid-template-rows: 50% 50% !important;
+  }
+
+  #mid-about {
+    height: 180vh !important;
+  }
+  #cover-about h1 {
+    font-size: 0.9rem !important;
+  }
+
+  #cover-about #the-mid-wrap {
+    grid-template-columns: 100% !important;
+    grid-template-rows: 25% 25% 25% 25% !important;
+  }
+
+  #team {
+    justify-content: center !important;
+    flex-direction: column;
+
+    .single-team {
+      width: 95% !important;
+      margin-bottom: 2rem !important;
+    }
+  }
+}
+
+/** huge sartPhones landscape mode*/
+
+@media (min-width: 751px) and (max-width: 950px) and (orientation: landscape) {
+}
+
+/******************* SMALL TABLET PORTAIT VIERW *****************************************/
+@media (min-width: 491px) and (max-width: 760px) and (orientation: portrait) {
+}
+
+/********************************** LARGE TABLET Portarit VIEW ***********************************************/
+@media (min-width: 761px) and (max-width: 920px) and (orientation: portrait) {
+}

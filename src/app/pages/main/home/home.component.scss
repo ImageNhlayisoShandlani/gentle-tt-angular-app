@@ -1,0 +1,760 @@
+$primary-color: #db5c87;
+$secondary-color: #db715c;
+$alt-color: #db5cc6;
+$info-text: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+$heading-text: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+  "Lucida Sans", Arial, sans-serif;
+
+/*
+******
+******
+****** Header and Nav Styles
+******
+******
+******
+*/
+
+.secondary-btn {
+  background: transparent;
+  color: $primary-color;
+  padding: 0.5rem;
+  border: $primary-color 1px solid;
+}
+
+.primary-btn {
+  background: $primary-color;
+  color: #fff;
+  padding: 0.5rem;
+  border: none;
+  text-transform: uppercase;
+}
+
+#welcome {
+  margin-top: 10rem;
+  margin-bottom: 2rem;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: row;
+  #left-welcome {
+    width: 40%;
+    height: 100%;
+    background: rgba($primary-color, 0.5);
+    position: relative;
+    box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+
+    img {
+      width: 95%;
+      height: 75%;
+      position: absolute;
+      top: 12.5%;
+      left: -15%;
+    }
+  }
+
+  #right-welcome {
+    width: 35%;
+    height: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+
+    #welcome-header {
+      color: $primary-color;
+      font-weight: bolder;
+      font-style: italic;
+      font-size: 1.25rem;
+    }
+
+    h2 {
+      font-size: 2rem;
+      margin-top: -1rem;
+    }
+
+    #main-welcome {
+      color: #474646;
+      font-family: $info-text;
+    }
+
+    #bottom-welcome {
+      width: 100%;
+      height: fit-content;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-direction: row;
+
+      .single-bottom-welcome {
+        width: 45%;
+
+        p {
+          color: #474646;
+          font-family: $info-text;
+        }
+      }
+
+      fa-icon {
+        color: $primary-color;
+        font-size: 1.8rem;
+      }
+    }
+  }
+}
+
+#mid-home {
+  width: 100%;
+  height: fit-content;
+  background: #f8f8f8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  z-index: 10;
+  overflow: hidden;
+
+  #top-mid-home {
+    margin-top: 2rem;
+    width: 94%;
+    margin-left: 3%;
+    margin-bottom: 2.5rem;
+
+    h3 {
+      font-family: $heading-text;
+      color: $primary-color;
+    }
+
+    p {
+      font-family: $info-text;
+    }
+  }
+  #bottom-mid-home {
+    margin-bottom: 2rem;
+    position: relative;
+    width: 94%;
+    margin-left: 3%;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: row;
+
+    .single-mid-home-card {
+      width: 32%;
+      height: 90vh;
+      margin-right: 2%;
+      overflow: hidden;
+
+      img {
+        width: 100%;
+        height: 100%;
+      }
+
+      .floating-info-bar {
+        padding-left: 2rem;
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        flex-direction: column;
+
+        p {
+          margin-bottom: -1rem;
+          color: #474646;
+        }
+
+        h4 {
+          font-style: italic;
+          font-family: $info-text;
+          font-weight: 300;
+        }
+      }
+    }
+  }
+}
+
+#home-stats {
+  width: 100%;
+  height: 60vh;
+  background: url(../../../../assets/extra-pictures/8.jpg);
+  background-size: cover;
+  overflow: hidden;
+  background-attachment: fixed;
+
+  #wrap-stats {
+    width: 100%;
+    height: inherit;
+    background: #1a1919cb;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    #stats-cover {
+      width: 85%;
+      height: 80%;
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+      flex-direction: row;
+
+      .single-stat {
+        width: 20%;
+        height: fit-content;
+        padding: 1rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .stat-icon {
+          margin-right: 1rem;
+
+          fa-icon {
+            font-size: 4rem;
+            color: $primary-color;
+          }
+        }
+
+        .stats-info {
+          height: 5rem;
+          display: flex;
+          align-items: flex-start;
+          justify-content: center;
+          flex-direction: column;
+
+          h3 {
+            margin-bottom: -0.75rem;
+            color: #b4afaf;
+            font-family: $heading-text;
+            font-weight: bold;
+            font-size: 1.8rem;
+          }
+
+          p {
+            color: $secondary-color;
+            font-family: $info-text;
+            font-style: italic;
+          }
+        }
+      }
+    }
+  }
+}
+
+#services-home {
+  overflow: hidden;
+  #top-services,
+  #bottom-services {
+    width: 100%;
+    height: 90vh;
+    display: grid;
+    grid-template-columns: 50% 50%;
+
+    .info-services {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      h2 {
+        font-family: $heading-text;
+        font-size: 2rem;
+      }
+
+      p {
+        font-family: $info-text;
+        color: #474646;
+        font-style: italic;
+      }
+
+      .primary-btn {
+        width: 10rem;
+        height: 2rem;
+        margin-top: 1rem;
+      }
+
+      div {
+        width: 80%;
+        height: 70%;
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        flex-direction: column;
+      }
+    }
+
+    .pic-services {
+      width: 100%;
+      height: 100%;
+
+      img {
+        width: 100%;
+        height: inherit;
+      }
+    }
+  }
+}
+
+.heading {
+  width: 100%;
+  margin: 5rem 0 1rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  h3 {
+    font-family: $heading-text;
+    color: $primary-color;
+    margin-bottom: -1rem;
+  }
+
+  h1 {
+    font-family: $info-text;
+    font-style: italic;
+    color: #474646;
+  }
+}
+
+#testimonials {
+  width: 100%;
+  height: fit-content;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  overflow: hidden;
+
+  .single-test {
+    width: 30%;
+    height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background: #f8f8f8;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px,
+      rgba(0, 0, 0, 0.05) 0px 5px 10px;
+    border-radius: 5px;
+
+    .top-test {
+      width: 80%;
+      height: 50%;
+      border-bottom: 1px solid #9b9696;
+
+      fa-icon {
+        color: $secondary-color;
+        margin-top: 3rem;
+        font-size: 1.35rem;
+      }
+
+      p {
+        margin-top: 4rem;
+        color: #474646;
+        font-family: $info-text;
+        font-style: italic;
+      }
+    }
+
+    .bottom-tests {
+      width: 80%;
+      height: 40%;
+
+      .bottom-tests-wrap {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+
+        .tests-img {
+          width: 5rem;
+          height: 5rem;
+          border-radius: 50%;
+          overflow: hidden;
+          margin-right: 2.5rem;
+
+          img {
+            width: 100%;
+            height: 100%;
+          }
+        }
+
+        h4 {
+          font-family: $heading-text;
+          margin-bottom: -0.75rem;
+        }
+
+        p {
+          font-family: $info-text;
+          font-style: italic;
+          color: #474646;
+        }
+      }
+    }
+  }
+}
+
+/** Smart Phone Portrait */
+
+@media (min-width: 280px) and (max-width: 525px) and (orientation: portrait) {
+  #welcome {
+    margin-top: 5rem;
+    flex-direction: column !important;
+    justify-content: center !important;
+
+    #left-welcome {
+      width: 80%;
+      height: 48%;
+    }
+
+    #right-welcome {
+      width: 95%;
+      height: 48%;
+      h2 {
+        font-size: 1.5rem;
+      }
+    }
+  }
+
+  #stats-cover {
+    width: 100% !important;
+    flex-direction: column !important;
+
+    .single-stat {
+      width: 100% !important;
+
+      .stat-icon {
+        width: 20% !important;
+      }
+
+      .stats-info {
+        width: 45% !important;
+      }
+    }
+  }
+
+  #services-home #top-services,
+  #services-home #bottom-services {
+    grid-template-columns: 100%;
+    grid-template-rows: 50% 50%;
+  }
+
+  #services-home #bottom-services .info-services {
+    order: -1;
+  }
+
+  #top-services,
+  #bottom-services {
+    height: 110vh !important;
+  }
+
+  #testimonials {
+    flex-direction: column;
+    justify-content: center;
+
+    .single-test {
+      width: 98%;
+      height: 75vh;
+      margin-bottom: 1.7rem;
+    }
+  }
+
+  #bottom-mid-home {
+    flex-direction: column !important;
+    margin-left: 0 !important;
+
+    .single-mid-home-card {
+      margin-right: 0 !important;
+      width: 92% !important;
+      margin-bottom: 2rem;
+    }
+  }
+}
+
+/** SmartPhones lanscape mode */
+
+@media (min-width: 526px) and (max-width: 760px) and (orientation: landscape) {
+  .floating-info-bar {
+    display: none !important;
+  }
+
+  #wrap-stats {
+    #stats-cover {
+      width: 100% !important;
+
+      .single-stat {
+        width: 21% !important;
+
+        fa-icon {
+          font-size: 2rem !important;
+        }
+
+        h3 {
+          font-size: 1rem;
+        }
+
+        p {
+          font-size: 0.55rem;
+        }
+      }
+    }
+  }
+
+  #top-services,
+  #bottom-services {
+    height: 110vh !important;
+  }
+
+  .single-test {
+    height: 100vh !important;
+  }
+
+  fa-icon {
+    font-size: 1rem !important;
+    margin-top: 0 !important;
+  }
+
+  .top-test {
+    width: 90% !important;
+  }
+  .top-test p {
+    margin-top: 1rem !important;
+    font-size: 0.8rem !important;
+  }
+
+  .bottom-tests {
+    width: 90% !important;
+
+    h4,
+    p {
+      font-size: 0.8rem !important;
+    }
+  }
+  .tests-img {
+    width: 4rem !important;
+    height: 4rem !important;
+    margin-right: 0.5rem !important;
+  }
+}
+
+/** huge sartPhones landscape mode*/
+
+@media (min-width: 751px) and (max-width: 950px) and (orientation: landscape) {
+  .floating-info-bar {
+    display: none !important;
+  }
+
+  #wrap-stats {
+    #stats-cover {
+      width: 100% !important;
+
+      .single-stat {
+        width: 21% !important;
+
+        fa-icon {
+          font-size: 2rem !important;
+        }
+
+        h3 {
+          font-size: 1rem;
+        }
+
+        p {
+          font-size: 0.55rem;
+        }
+      }
+    }
+  }
+
+  .top-test {
+    width: 90% !important;
+  }
+  .top-test p {
+    margin-top: 1rem !important;
+    font-size: 0.8rem !important;
+  }
+
+  .bottom-tests {
+    width: 90% !important;
+
+    h4,
+    p {
+      font-size: 0.8rem !important;
+    }
+  }
+  .tests-img {
+    width: 4rem !important;
+    height: 4rem !important;
+    margin-right: 0.5rem !important;
+  }
+}
+
+/******************* SMALL TABLET PORTAIT VIERW *****************************************/
+@media (min-width: 491px) and (max-width: 760px) and (orientation: portrait) {
+  #welcome {
+    margin-top: 5rem;
+    flex-direction: column !important;
+    justify-content: center !important;
+
+    #left-welcome {
+      width: 80%;
+      height: 48%;
+    }
+
+    #right-welcome {
+      width: 95%;
+      height: 48%;
+      h2 {
+        font-size: 1.5rem;
+      }
+    }
+  }
+
+  #stats-cover {
+    width: 100% !important;
+    flex-direction: column !important;
+
+    .single-stat {
+      width: 100% !important;
+
+      .stat-icon {
+        width: 20% !important;
+      }
+
+      .stats-info {
+        width: 45% !important;
+      }
+    }
+  }
+
+  #services-home #top-services,
+  #services-home #bottom-services {
+    grid-template-columns: 100%;
+    grid-template-rows: 50% 50%;
+  }
+
+  #services-home #bottom-services .info-services {
+    order: -1;
+  }
+
+  #top-services,
+  #bottom-services {
+    height: 110vh !important;
+  }
+
+  #testimonials {
+    flex-direction: column;
+    justify-content: center;
+
+    .single-test {
+      width: 98%;
+      height: 75vh;
+      margin-bottom: 1.7rem;
+    }
+  }
+
+  #bottom-mid-home {
+    flex-direction: column !important;
+    margin-left: 0 !important;
+
+    .single-mid-home-card {
+      margin-right: 0 !important;
+      width: 92% !important;
+      margin-bottom: 2rem;
+    }
+  }
+}
+
+/********************************** LARGE TABLET Portarit VIEW ***********************************************/
+@media (min-width: 761px) and (max-width: 920px) and (orientation: portrait) {
+  #welcome {
+    margin-top: 5rem;
+    flex-direction: column !important;
+    justify-content: center !important;
+
+    #left-welcome {
+      width: 80%;
+      height: 48%;
+    }
+
+    #right-welcome {
+      width: 95%;
+      height: 48%;
+      h2 {
+        font-size: 1.5rem;
+      }
+    }
+  }
+
+  .single-mid-home-card {
+    height: 30vh !important;
+
+    div {
+      display: none !important;
+    }
+  }
+
+  #stats-cover {
+    width: 100% !important;
+    flex-direction: column !important;
+
+    .single-stat {
+      width: 100% !important;
+
+      .stat-icon {
+        width: 20% !important;
+      }
+
+      .stats-info {
+        width: 45% !important;
+      }
+    }
+  }
+
+  #top-services,
+  #bottom-services {
+    height: 50vh !important;
+  }
+
+  #testimonials {
+    justify-content: space-evenly;
+
+    .single-test {
+      width: 30;
+      height: 50vh;
+      margin-bottom: 1.7rem;
+    }
+  }
+
+  #bottom-mid-home {
+    flex-direction: column !important;
+    margin-left: 0 !important;
+
+    .single-mid-home-card {
+      margin-right: 0 !important;
+      width: 92% !important;
+      margin-bottom: 2rem;
+    }
+
+    h4,
+    p {
+      font-size: 0.8rem;
+    }
+  }
+
+  .tests-img {
+    width: 4rem !important;
+    height: 4rem !important;
+    margin-right: 0.5rem !important;
+  }
+
+  .single-test {
+    h4,
+    p {
+      font-size: 0.8rem;
+    }
+  }
+}

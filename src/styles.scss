@@ -1,1 +1,72 @@
 /* You can add global styles to this file, and also import other style files */
+
+$primary-color: #db5c87;
+$secondary-color: #db715c;
+$alt-color: #db5cc6;
+$info-text: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+$heading-text: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+  "Lucida Sans", Arial, sans-serif;
+
+/*
+******
+******
+****** Header and Nav Styles
+******
+******
+******
+*/
+
+.secondary-btn {
+  background: transparent;
+  color: $primary-color;
+  padding: 0.5rem;
+  border: $primary-color 1px solid;
+}
+
+.primary-btn {
+  background: $primary-color;
+  color: #fff;
+  padding: 0.5rem;
+  border: none;
+  text-transform: uppercase;
+}
+html,
+body {
+  padding: 0;
+  margin: 0;
+  overflow-x: hidden;
+}
+
+.active-desktop {
+  a {
+    color: $primary-color !important;
+    font-style: italic;
+    text-decoration: underline;
+    font-size: 1.7rem;
+  }
+}
+
+.heading {
+  width: 100%;
+  margin: 5rem 0 1rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  h3 {
+    font-family: $heading-text;
+    color: $primary-color;
+    margin-bottom: -1rem;
+  }
+
+  h1 {
+    font-family: $info-text;
+    font-style: italic;
+    color: #474646;
+  }
+}
+/** Mobile Menu */
+
+@media screen and (max-width: 912px) {
+}

@@ -1,0 +1,207 @@
+$primary-color: #db5c87;
+$secondary-color: #db715c;
+$alt-color: #db5cc6;
+$info-text: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+$heading-text: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+  "Lucida Sans", Arial, sans-serif;
+
+#top-of-products {
+  width: 100%;
+  height: fit-content;
+  padding-left: 5%;
+
+  p {
+    font-family: $info-text;
+    font-style: italic;
+  }
+
+  .bottom-head-products {
+    width: 15%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    select {
+      background: transparent;
+      color: $primary-color;
+      border: 1px $primary-color solid;
+      width: 8rem;
+      font-size: 1.1rem;
+      border-radius: 3px;
+
+      option {
+        font-family: $info-text;
+      }
+    }
+  }
+}
+
+#products {
+  width: 90%;
+  margin-left: 5%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-top: 2.5rem;
+
+  .single-product {
+    width: 22%;
+    height: 75vh;
+    box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+    margin-bottom: 10rem;
+    margin-right: 3%;
+
+    .img-product {
+      width: 100%;
+      height: 55%;
+      margin: 0;
+
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    .name-product {
+      width: 100%;
+      height: 15%;
+      padding-left: 1rem;
+
+      h4 {
+        font-family: $heading-text;
+      }
+    }
+
+    .price,
+    .rating,
+    .button-product {
+      width: 100%;
+      height: 10%;
+      padding-left: 1rem;
+
+      fa-icon {
+        color: $secondary-color;
+      }
+
+      p {
+        font-family: $info-text;
+        color: #474646;
+        font-style: italic;
+
+        i {
+          color: $primary-color;
+          font-style: italic;
+        }
+      }
+    }
+
+    .price {
+      margin-top: -2.5rem;
+    }
+
+    button {
+      width: 8.5rem;
+      height: 2rem;
+      background: $primary-color;
+      color: aliceblue;
+      border: none;
+    }
+  }
+}
+
+/** Smart Phone Portrait */
+
+@media (min-width: 280px) and (max-width: 525px) and (orientation: portrait) {
+  .bottom-head-products {
+    width: 60% !important;
+  }
+
+  #products {
+    margin-left: 0 !important;
+    flex-direction: column !important;
+    width: 100% !important;
+
+    .single-product {
+      width: 92% !important;
+      height: 65vh !important;
+      margin-bottom: 3rem !important;
+    }
+  }
+}
+
+/** SmartPhones lanscape mode */
+
+@media (min-width: 526px) and (max-width: 760px) and (orientation: landscape) {
+  .bottom-head-products {
+    width: 30% !important;
+  }
+
+  #products {
+    width: 100% !important;
+    flex-wrap: wrap !important;
+
+    .single-product {
+      width: 45% !important;
+      height: 100vh !important;
+      margin-bottom: 3rem !important;
+    }
+  }
+}
+
+/** huge sartPhones landscape mode*/
+
+@media (min-width: 751px) and (max-width: 950px) and (orientation: landscape) {
+  .bottom-head-products {
+    width: 30% !important;
+  }
+
+  #products {
+    width: 100% !important;
+    flex-wrap: wrap !important;
+
+    .single-product {
+      width: 45% !important;
+      height: 100vh !important;
+      margin-bottom: 3rem !important;
+    }
+  }
+}
+
+/******************* SMALL TABLET PORTAIT VIERW *****************************************/
+@media (min-width: 491px) and (max-width: 760px) and (orientation: portrait) {
+  .bottom-head-products {
+    width: 60% !important;
+  }
+
+  #products {
+    margin-left: 0 !important;
+    flex-direction: column !important;
+    width: 100% !important;
+
+    .single-product {
+      width: 92% !important;
+      height: 75vh !important;
+      margin-bottom: 3rem !important;
+    }
+  }
+}
+
+/********************************** LARGE TABLET Portarit VIEW ***********************************************/
+@media (min-width: 761px) and (max-width: 920px) and (orientation: portrait) {
+  .bottom-head-products {
+    width: 30% !important;
+  }
+
+  #products {
+    width: 100% !important;
+    flex-wrap: wrap !important;
+
+    .single-product {
+      width: 45% !important;
+      height: 55vh !important;
+      margin-bottom: 3rem !important;
+    }
+  }
+}

@@ -2,25 +2,114 @@
 
 <header>
   <div class="top-header">
-    <div class="contact-header"></div>
-    <div class="header-socials"></div>
+    <div class="contact-header">
+      <div class="email-header">
+        <div class="icon-header">
+          <fa-icon [icon]="phone"></fa-icon>
+        </div>
+        <p>061 45687 67454</p>
+      </div>
+      <div class="call-header">
+        <div class="icon-header">
+          <fa-icon [icon]="mail"></fa-icon>
+        </div>
+        <p>imagenglayiso@gmail.com</p>
+      </div>
+    </div>
+    <div class="header-socials">
+      <fa-icon [icon]="facebook"></fa-icon>
+      <fa-icon [icon]="twitter"></fa-icon>
+      <fa-icon [icon]="insta"></fa-icon>
+    </div>
   </div>
 
-  <nav>
+  <nav class="">
     <a href="" class="logo">
-      <img src="" alt="" />
+      <img src="../assets/ICON only/5-01.png" alt="" />
     </a>
 
-    <ul>
-      <li><a href="">Home</a></li>
-      <li><a href="">Sevices</a></li>
-      <li><a href="">Products</a></li>
-      <li><a href="">About Us</a></li>
-      <li><a href="">Contact</a></li>
-      <li><a href="">Login</a></li>
+    <ul id="navigation">
+      <button
+        (click)="openes()"
+        class="mobile-menu-icon"
+        style="color: red; border-color: red"
+      >
+        <fa-icon [icon]="close"></fa-icon>
+      </button>
+      <li (click)="openes()" routerLinkActive="active-desktop">
+        <a routerLink="/home-component">Home</a>
+      </li>
+      <li (click)="openes()" routerLinkActive="active-desktop">
+        <a routerLink="/services-component">Sevices</a>
+      </li>
+      <li (click)="openes()" routerLinkActive="active-desktop">
+        <a routerLink="/products-component">Products</a>
+      </li>
+      <li (click)="openes()" routerLinkActive="active-desktop">
+        <a routerLink="/about-component">About Us</a>
+      </li>
+      <li (click)="openes()" routerLinkActive="active-desktop">
+        <a routerLink="/contact-component">Contact</a>
+      </li>
+      <li (click)="openes()" routerLinkActive="active-desktop">
+        <a routerLink="/login-component">Login</a>
+      </li>
 
-      <button>Book Now</button>
+      <button
+        class="secondary-btn"
+        routerLink="/services-component"
+        (click)="openes()"
+      >
+        Book Now
+      </button>
     </ul>
+
+    <button class="mobile-menu-icon" (click)="change()">
+      <fa-icon [icon]="menu"></fa-icon>
+    </button>
   </nav>
+
+  <div class="cover-header" id="huey">
+    <div>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium nemo
+        nulla aliquid, alias voluptas tenetur, recusandae deserunt, debitis
+        porro quae quis dolor vero ipsam. Cum!
+      </p>
+      <button
+        (click)="openes()"
+        class="primary-btn"
+        routerLink="/products-component"
+      >
+        Shop Our Range
+      </button>
+    </div>
+  </div>
 </header>
 <router-outlet></router-outlet>
+
+<footer>
+  <div class="foot-wrap">
+    <div class="top-foot">
+      <img src="../assets/TEXT only/2-01.png" alt="" />
+      <div class="text-foot">
+        <div class="left-text-foot">
+          <p class="top-text-foot-p">2667 Protea Glen Ext 2</p>
+          <p>Soweto, Johannesburg PO Box 1819</p>
+        </div>
+        <div class="right-text-foot">
+          <p class="top-text-foot-p">Phone : 011 264 3467 | 061 456 7633</p>
+          <p>Email : shondlani@mail.com</p>
+        </div>
+      </div>
+      <div class="icon-footer">
+        <fa-icon [icon]="facebook" style="color: #3b5998"></fa-icon>
+        <fa-icon [icon]="twitter" style="color: #1da1f2"></fa-icon>
+        <fa-icon [icon]="insta" style="color: #cd486b"></fa-icon>
+      </div>
+    </div>
+    <div class="bottom-footer">
+      <h3>All Rights Reserves &copy; 2023 Gentle TT & MK Innovations</h3>
+    </div>
+  </div>
+</footer>

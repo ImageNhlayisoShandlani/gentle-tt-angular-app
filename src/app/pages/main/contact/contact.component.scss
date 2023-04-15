@@ -1,0 +1,138 @@
+$primary-color: #db5c87;
+$secondary-color: #db715c;
+$alt-color: #db5cc6;
+$info-text: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+$heading-text: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+  "Lucida Sans", Arial, sans-serif;
+
+#form {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 2rem;
+
+  form {
+    width: 70%;
+    height: fit-content;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    .two-step-form {
+      width: 100%;
+      margin-bottom: 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      input {
+        width: 45%;
+        height: 3rem;
+        border: none;
+        border-bottom: 1px solid #3a3838;
+        border-radius: 5px;
+        padding-left: 1rem;
+      }
+
+      input:active {
+        border-color: $primary-color;
+      }
+    }
+
+    .form-whole {
+      width: 100%;
+      margin-bottom: 1.5rem;
+
+      textarea {
+        width: 100%;
+        border: none;
+        border-bottom: 1px solid #3a3838;
+        border-radius: 5px;
+      }
+    }
+  }
+}
+
+#map {
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  iframe {
+    width: 90%;
+    height: 85vh;
+    margin-bottom: 2em;
+  }
+}
+
+.contacts-wrap {
+  width: 80%;
+  margin-left: 10%;
+  height: fit-content;
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  justify-content: space-between;
+
+  .single-contacts {
+    width: 23%;
+  }
+
+  h2 {
+    color: #3a3838;
+    font-family: $heading-text;
+    margin-bottom: 2rem;
+  }
+
+  p {
+    font-family: $info-text;
+    font-style: italic;
+    margin-bottom: 0.5rem;
+    color: #5f5b5b;
+  }
+}
+
+/** Smart Phone Portrait */
+
+@media (min-width: 280px) and (max-width: 525px) and (orientation: portrait) {
+  form {
+    width: 95% !important;
+  }
+
+  iframe {
+    height: 60vh !important;
+  }
+
+  .contacts-wrap {
+    width: 95% !important;
+    margin-left: 2.5rem !important;
+    flex-direction: column !important;
+
+    .single-contacts {
+      width: 100% !important;
+    }
+  }
+}
+
+/** SmartPhones lanscape mode */
+
+@media (min-width: 526px) and (max-width: 760px) and (orientation: landscape) {
+}
+
+/** huge sartPhones landscape mode*/
+
+@media (min-width: 751px) and (max-width: 950px) and (orientation: landscape) {
+}
+
+/******************* SMALL TABLET PORTAIT VIERW *****************************************/
+@media (min-width: 491px) and (max-width: 760px) and (orientation: portrait) {
+}
+
+/********************************** LARGE TABLET Portarit VIEW ***********************************************/
+@media (min-width: 761px) and (max-width: 920px) and (orientation: portrait) {
+}

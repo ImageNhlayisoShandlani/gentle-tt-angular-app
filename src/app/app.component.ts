@@ -6,6 +6,19 @@ import {
   ElementRef,
 } from '@angular/core';
 
+import {
+  faFacebook,
+  faTwitter,
+  faInstagram,
+} from '@fortawesome/free-brands-svg-icons';
+import {
+  faMailBulk,
+  faPhone,
+  faHamburger,
+  faBars,
+  faRectangleXmark,
+} from '@fortawesome/free-solid-svg-icons';
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -13,10 +26,26 @@ import {
 })
 export class AppComponent implements OnInit {
   title = 'gentle-tt';
+  phone = faPhone;
+  facebook = faFacebook;
+  twitter = faTwitter;
+  insta = faInstagram;
+  mail = faMailBulk;
+  menu = faBars;
+  close = faRectangleXmark;
 
   change() {
-    const h = document.getElementById('hom') as HTMLElement;
-    h.classList.add('me');
+    let x = document.querySelector('ul') as HTMLElement;
+    x.style.right = 'initial';
+  }
+
+  openes() {
+    let x = document.querySelector('ul') as HTMLElement;
+    x.style.right = '-150%';
+  }
+
+  openSide() {
+    console.log(2);
   }
   ngOnInit(): void {}
 
@@ -25,13 +54,16 @@ export class AppComponent implements OnInit {
   onScrollEven() {
     // console.log($event['Window']);
     console.log('scrolling');
-
-    if (window.scrollY > 250) {
-      this.header_var = true;
+    var cover = document.getElementById('huey') as HTMLElement;
+    if (window.scrollY > 150) {
+      document.getElementsByTagName('nav')[0].classList.add('onScrollNav');
+      cover.classList.add('onScrollCover');
     } else {
-      this.header_var = false;
+      document.getElementsByTagName('nav')[0].classList.remove('onScrollNav');
+      cover.classList.remove('onScrollCover');
     }
 
+    /*
     if (window.scrollY > 500) {
       const v = document.querySelector('.floating-btn') as HTMLElement;
       v.style.opacity = '1';
@@ -39,5 +71,6 @@ export class AppComponent implements OnInit {
       const v = document.querySelector('.floating-btn') as HTMLElement;
       v.style.opacity = '0';
     }
+    */
   }
 }

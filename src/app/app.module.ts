@@ -8,20 +8,16 @@ import { CommonModule } from '@angular/common';
 import { HomeComponent } from './pages/main/home/home.component';
 import { RouterModule, Routes } from '@angular/router';
 
-const appRoutes: Routes = [
-  {
-    path: 'Home',
-    component: HomeComponent,
-  },
-];
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { ContactComponent } from './pages/main/contact/contact.component';
+import { LoginComponent } from './pages/main/login/login.component';
+import { ServicesComponent } from './pages/main/services/services.component';
+import { ProductsComponent } from './pages/main/products/products.component';
+import { AboutUsComponent } from './pages/main/about-us/about-us.component';
+
 @NgModule({
-  declarations: [AppComponent, HomeComponent],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    CommonModule,
-    RouterModule.forRoot(appRoutes),
-  ],
+  declarations: [AppComponent, HomeComponent, ContactComponent, LoginComponent, ServicesComponent, ProductsComponent, AboutUsComponent],
+  imports: [BrowserModule, AppRoutingModule, CommonModule, FontAwesomeModule],
   providers: [],
   bootstrap: [AppComponent],
 })

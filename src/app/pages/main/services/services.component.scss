@@ -1,0 +1,332 @@
+$primary-color: #db5c87;
+$secondary-color: #db715c;
+$alt-color: #db5cc6;
+$info-text: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+$heading-text: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+  "Lucida Sans", Arial, sans-serif;
+
+#service-types {
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f8f8f8;
+
+  #types-wrap {
+    width: 95%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    .single-type {
+      width: 48%;
+      height: 20vh;
+      margin-bottom: 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-direction: row;
+
+      .icon-types {
+        width: 15%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        fa-icon {
+          font-size: 2.5rem;
+          color: $primary-color;
+        }
+      }
+
+      .type-info {
+        width: 80%;
+        height: 100%;
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        flex-direction: column;
+
+        .top-type-info {
+          display: flex;
+          align-items: center;
+          justify-content: flex-start;
+          margin-bottom: -1rem;
+
+          p {
+            font-family: $heading-text;
+            color: #353333;
+            font-weight: 700;
+          }
+
+          .price {
+            color: $primary-color;
+            font-family: $info-text;
+            font-style: italic;
+          }
+
+          div {
+            width: 15rem;
+            height: 0.1px;
+            border: 0.5px dotted $secondary-color;
+            border-left: none;
+            border-right: none;
+            margin-right: 1rem;
+            margin-left: 1rem;
+          }
+        }
+
+        .bottom-type-info {
+          p {
+            font-family: $info-text;
+            font-style: italic;
+            color: #474646;
+          }
+        }
+      }
+    }
+  }
+}
+
+#pricing {
+  width: 100%;
+  margin-top: 4rem;
+  height: fit-content;
+  margin-bottom: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+
+  .single-pricing {
+    width: 30%;
+    height: 90vh;
+    border: 1px solid $primary-color;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .cover-pricing {
+      width: 90%;
+      height: 105%;
+      background: #f8f8f8a1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+
+      .heading-pricing {
+        width: 65%;
+        height: 15%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        h2 {
+          font-family: $heading-text;
+          font-size: 2rem;
+        }
+      }
+
+      .price-pricing {
+        width: 75%;
+        height: 25%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        p {
+          font-family: $info-text;
+          color: #474646;
+          font-size: 1.65rem;
+          font-style: italic;
+
+          i {
+            font-size: 1rem;
+            font-style: italic;
+            color: $primary-color;
+          }
+        }
+      }
+
+      .info-pricing {
+        width: 85%;
+        height: 35%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+
+        fa-icon {
+          color: $primary-color;
+        }
+      }
+
+      .button-pricing {
+        height: 10%;
+
+        button {
+          width: 6rem;
+          border: none;
+          background: transparent;
+          color: #474646;
+          border-bottom: 1px solid $secondary-color;
+          border-left: 1px solid $secondary-color;
+          border-radius: 3px;
+        }
+      }
+    }
+  }
+
+  .mid-pricing {
+    .cover-pricing {
+      height: 110%;
+      background: #f8f8f8c2;
+    }
+  }
+}
+
+/** Smart Phone Portrait */
+
+@media (min-width: 280px) and (max-width: 525px) and (orientation: portrait) {
+  #types-wrap {
+    flex-direction: column !important;
+
+    .single-type {
+      width: 99% !important;
+
+      .top-type-info {
+        div {
+          width: 3rem !important;
+        }
+      }
+    }
+  }
+
+  #pricing {
+    flex-direction: column;
+
+    .single-pricing {
+      width: 95% !important;
+      height: 80vh !important;
+      margin-bottom: 3.5rem;
+    }
+  }
+}
+
+/** SmartPhones lanscape mode */
+
+@media (min-width: 526px) and (max-width: 760px) and (orientation: landscape) {
+  .single-type {
+    height: 37vh !important;
+
+    .top-type-info {
+      div {
+        width: 3rem !important;
+      }
+    }
+  }
+
+  .single-pricing {
+    h2,
+    p {
+      font-size: 0.9rem !important;
+    }
+  }
+
+  .heading-pricing {
+    height: 4% !important;
+  }
+
+  .price-pricing {
+    height: 20% !important;
+  }
+
+  .info-pricing {
+    height: 55% !important;
+  }
+}
+
+/** huge sartPhones landscape mode*/
+
+@media (min-width: 751px) and (max-width: 950px) and (orientation: landscape) {
+  .single-pricing {
+    h2,
+    p {
+      font-size: 0.9rem !important;
+    }
+  }
+
+  .heading-pricing {
+    height: 4% !important;
+  }
+
+  .price-pricing {
+    height: 20% !important;
+  }
+
+  .info-pricing {
+    height: 55% !important;
+  }
+}
+
+/******************* SMALL TABLET PORTAIT VIERW *****************************************/
+@media (min-width: 491px) and (max-width: 760px) and (orientation: portrait) {
+  .top-type-info div {
+    width: 3rem !important;
+  }
+
+  #types-wrap {
+    flex-direction: column !important;
+
+    .single-type {
+      width: 99% !important;
+
+      .top-type-info {
+        div {
+          width: 3rem !important;
+        }
+      }
+    }
+  }
+
+  #pricing {
+    flex-direction: column;
+
+    .single-pricing {
+      width: 95% !important;
+      height: 80vh !important;
+      margin-bottom: 3.5rem;
+    }
+  }
+}
+
+/********************************** LARGE TABLET Portarit VIEW ***********************************************/
+@media (min-width: 761px) and (max-width: 920px) and (orientation: portrait) {
+  #types-wrap {
+    flex-direction: column !important;
+
+    .single-type {
+      width: 99% !important;
+
+      .top-type-info {
+        div {
+          width: 15rem !important;
+        }
+      }
+    }
+  }
+
+  #pricing {
+    flex-direction: row;
+
+    .single-pricing {
+      width: 30% !important;
+      height: 60vh !important;
+      margin-bottom: 3.5rem;
+    }
+  }
+}
