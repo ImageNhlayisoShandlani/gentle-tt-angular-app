@@ -1,0 +1,37 @@
+<div>
+  <button mat-icon-button mat-dialog-close="">
+    <fa-icon [icon]="faClose"></fa-icon>
+  </button>
+  <mat-dialog-content>
+    <header>
+      <h1>Book A Date With Us!</h1>
+    </header>
+
+    <input type="text" name="" id="" matInput placeholder="name" />
+
+    <input type="date" placeholder="Select Date" matInput />
+
+    <select name="" id="" matInput>
+      <option value="">Select Type</option>
+      <option value="">Nails</option>
+      <option value="">Spa Treatment</option>
+      <option value="">Other</option>
+    </select>
+
+    <input type="email" name="" id="" matInput placeholder="email" />
+  </mat-dialog-content>
+
+  <mat-dialog-actions>
+    <button
+      mat-raised-button
+      class="save-dialog"
+      mat-dialog-close=""
+      (click)="saved()"
+    >
+      Book
+    </button>
+    <button mat-raised-button mat-dialog-close="" class="close-dialog">
+      Close
+    </button>
+  </mat-dialog-actions>
+</div>

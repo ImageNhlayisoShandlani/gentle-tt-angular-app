@@ -14,6 +14,23 @@ $heading-text: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
 ******
 */
 
+.cart-style {
+  position: relative;
+
+  div {
+    position: absolute;
+    right: -0.5rem;
+    top: -0.2rem;
+    background: $primary-color;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 1rem;
+    width: 1rem;
+    color: #fff;
+  }
+}
 .secondary-btn {
   background: transparent;
   color: $primary-color;
@@ -403,6 +420,9 @@ footer {
 /** huge sartPhones landscape mode*/
 
 @media (min-width: 751px) and (max-width: 950px) and (orientation: landscape) {
+  header nav ul li a {
+    font-size: 1rem !important;
+  }
   .foot-wrap {
     height: 135vh !important;
   }
@@ -441,4 +461,7 @@ footer {
 
 /********************************** LARGE TABLET Portarit VIEW ***********************************************/
 @media (min-width: 761px) and (max-width: 920px) and (orientation: portrait) {
+  header nav ul li a {
+    font-size: 1rem !important;
+  }
 }

@@ -1,6 +1,6 @@
 <!-- APP Navigation Bar -->
 
-<header>
+<header (scroll)="huy()">
   <div class="top-header">
     <div class="contact-header">
       <div class="email-header">
@@ -40,9 +40,9 @@
         <a routerLink="/home-component">Home</a>
       </li>
       <li (click)="openes()" routerLinkActive="active-desktop">
-        <a routerLink="/services-component">Sevices</a>
+        <a routerLink="/services-component">Services</a>
       </li>
-      <li (click)="openes()" routerLinkActive="active-desktop">
+      <li (click)="login()" routerLinkActive="active-desktop">
         <a routerLink="/products-component">Products</a>
       </li>
       <li (click)="openes()" routerLinkActive="active-desktop">
@@ -55,13 +55,18 @@
         <a routerLink="/login-component">Login</a>
       </li>
 
-      <button
-        class="secondary-btn"
-        routerLink="/services-component"
+      <li
         (click)="openes()"
+        class="cart-style"
+        routerLinkActive="active-desktop"
       >
-        Book Now
-      </button>
+        <a routerLink="/cart-component">Cart</a>
+        <div>
+          <p>0</p>
+        </div>
+      </li>
+
+      <button class="secondary-btn" (click)="openDialog()">Book Now</button>
     </ul>
 
     <button class="mobile-menu-icon" (click)="change()">
@@ -86,7 +91,8 @@
     </div>
   </div>
 </header>
-<router-outlet></router-outlet>
+
+<router-outlet (scroll)="huy()"></router-outlet>
 
 <footer>
   <div class="foot-wrap">

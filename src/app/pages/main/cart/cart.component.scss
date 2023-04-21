@@ -1,0 +1,357 @@
+$primary-color: #db5c87;
+$secondary-color: #db715c;
+$alt-color: #db5cc6;
+$info-text: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+$heading-text: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+  "Lucida Sans", Arial, sans-serif;
+
+/*
+******
+******
+****** Header and Nav Styles
+******
+******
+******
+*/
+.secondary-btn {
+  background: transparent;
+  color: $primary-color;
+  padding: 0.5rem;
+  border: $primary-color 1px solid;
+  transition: ease-in 0.3s;
+  cursor: pointer;
+}
+
+.secondary-btn:hover {
+  background: $primary-color;
+  color: #fff;
+}
+
+.primary-btn {
+  background: $primary-color;
+  color: #fff;
+  padding: 0.5rem;
+  border: none;
+  text-transform: uppercase;
+  transition: ease-in 0.3s;
+  cursor: pointer;
+}
+
+.primary-btn:hover {
+  background: transparent;
+  color: $primary-color;
+}
+
+#cart-main {
+  margin-top: 2.5rem;
+  margin-bottom: 2.5rem;
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  #the-cart {
+    width: 80%;
+    border: lightgray 1px solid;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    #cart-header {
+      width: 100%;
+      height: 10vh;
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+      background: #eceaeacc;
+
+      #product-head {
+        width: 35%;
+        height: 100%;
+      }
+
+      #price-head,
+      #total-head {
+        width: 20%;
+      }
+
+      #quantity-head {
+        width: 25%;
+      }
+
+      #quantity-head,
+      #product-head,
+      #price-head,
+      #total-head {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        padding-left: 0.85rem;
+
+        h1 {
+          font-family: $heading-text;
+          color: #252424cc;
+          font-size: 1.35rem;
+        }
+      }
+    }
+
+    #cart-body {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+
+      p {
+        font-family: $info-text;
+        font-style: italic;
+        color: #252424cc;
+        font-weight: bold;
+      }
+      .single-cart-body {
+        width: 100%;
+        height: 15vh;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+
+        .product {
+          width: 35%;
+          height: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: flex-start;
+          padding-left: 1.35rem;
+
+          button {
+            margin-right: 0.5rem;
+            background: crimson;
+            border: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #eeeaea;
+            height: 1.2rem;
+            font-family: $info-text;
+            width: 5.5rem;
+            border-radius: 5px;
+            cursor: pointer;
+          }
+        }
+
+        .price,
+        .total {
+          width: 20%;
+          height: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: flex-start;
+          padding-left: 1.35rem;
+        }
+
+        .quantity {
+          width: 25%;
+          height: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: flex-start;
+          padding-left: 1.35rem;
+
+          div {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            margin-left: 0.5rem;
+
+            button {
+              background: #eceaeacc;
+              color: #252424cc;
+              cursor: pointer;
+              border: #252424cc 1px solid;
+              fa-icon {
+                font-size: 0.75rem;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    #cart-footer {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 10vh;
+      background: #eceaeacc;
+
+      #total-foot {
+        margin-left: 0.85rem;
+
+        p {
+          font-family: $info-text;
+
+          i {
+            font-weight: bold;
+          }
+        }
+      }
+
+      #proceed-foot {
+        margin-right: 0.85rem;
+
+        p {
+          font-family: $info-text;
+        }
+      }
+    }
+  }
+}
+
+/** Smart Phone Portrait */
+
+@media (min-width: 280px) and (max-width: 525px) and (orientation: portrait) {
+  #the-cart {
+    flex-wrap: wrap;
+    justify-content: space-evenly !important;
+    flex-direction: row !important;
+
+    #cart-header,
+    #cart-body {
+      width: 50% !important;
+      height: 47vh !important;
+      flex-direction: column !important;
+      align-items: flex-start;
+    }
+
+    #price-head,
+    #quantity-head,
+    #total-head,
+    #product-head {
+      width: 100% !important;
+    }
+
+    #price-head,
+    #total-head {
+      height: 20% !important;
+    }
+    #product-head {
+      height: 25% !important;
+    }
+
+    #quantity-head {
+      height: 35% !important;
+    }
+    .single-cart-body {
+      width: 100% !important;
+      flex-direction: column !important;
+      height: 100% !important;
+
+      .product {
+        width: 100% !important;
+        height: 25% !important;
+        flex-direction: column !important;
+        padding-top: 1rem;
+      }
+
+      .price,
+      .total {
+        width: 100% !important;
+        height: 20% !important;
+        justify-content: center !important;
+        padding-left: 0 !important;
+      }
+
+      .quantity {
+        width: 100% !important;
+        height: 35% !important;
+        justify-content: center !important;
+        padding-left: 0 !important;
+      }
+    }
+  }
+}
+
+/** SmartPhones lanscape mode */
+
+@media (min-width: 526px) and (max-width: 760px) and (orientation: landscape) {
+  #the-cart {
+    width: 98% !important;
+  }
+}
+
+/** huge sartPhones landscape mode*/
+
+@media (min-width: 751px) and (max-width: 950px) and (orientation: landscape) {
+}
+
+/******************* SMALL TABLET PORTAIT VIERW *****************************************/
+@media (min-width: 491px) and (max-width: 760px) and (orientation: portrait) {
+  #the-cart {
+    flex-wrap: wrap;
+    justify-content: space-evenly !important;
+    flex-direction: row !important;
+
+    #cart-header,
+    #cart-body {
+      width: 50% !important;
+      height: 47vh !important;
+      flex-direction: column !important;
+      align-items: flex-start;
+    }
+
+    #price-head,
+    #quantity-head,
+    #total-head,
+    #product-head {
+      width: 100% !important;
+    }
+
+    #price-head,
+    #total-head {
+      height: 20% !important;
+    }
+    #product-head {
+      height: 25% !important;
+    }
+
+    #quantity-head {
+      height: 35% !important;
+    }
+    .single-cart-body {
+      width: 100% !important;
+      flex-direction: column !important;
+      height: 100% !important;
+
+      .product {
+        width: 100% !important;
+        height: 25% !important;
+        flex-direction: column !important;
+        padding-top: 1rem;
+      }
+
+      .price,
+      .total {
+        width: 100% !important;
+        height: 20% !important;
+        justify-content: center !important;
+        padding-left: 0 !important;
+      }
+
+      .quantity {
+        width: 100% !important;
+        height: 35% !important;
+        justify-content: center !important;
+        padding-left: 0 !important;
+      }
+    }
+  }
+}
+
+/********************************** LARGE TABLET Portarit VIEW ***********************************************/
+@media (min-width: 761px) and (max-width: 920px) and (orientation: portrait) {
+}

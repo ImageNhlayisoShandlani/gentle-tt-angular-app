@@ -1,0 +1,49 @@
+<div id="cart-main">
+  <div id="the-cart">
+    <div id="cart-header">
+      <div id="product-head">
+        <h1>Product</h1>
+      </div>
+      <div id="price-head">
+        <h1>Price</h1>
+      </div>
+      <div id="quantity-head">
+        <h1>Quantity</h1>
+      </div>
+      <div id="total-head">
+        <h1>Total</h1>
+      </div>
+    </div>
+    <div id="cart-body">
+      <div class="single-cart-body">
+        <div class="product">
+          <button>remove</button>
+          <p>Nail Polish</p>
+        </div>
+        <div class="price">
+          <p>R150.00</p>
+        </div>
+        <div class="quantity">
+          <p>1</p>
+          <div>
+            <button>
+              <fa-icon [icon]="faUp"></fa-icon>
+            </button>
+            <button><fa-icon [icon]="faDown"></fa-icon></button>
+          </div>
+        </div>
+        <div class="total">
+          <p>R150.00</p>
+        </div>
+      </div>
+    </div>
+    <div id="cart-footer">
+      <div id="total-foot">
+        <p>Total Cart = <i>R150.00</i></p>
+      </div>
+      <div id="proceed-foot">
+        <button class="primary-btn">checkout</button>
+      </div>
+    </div>
+  </div>
+</div>

@@ -107,6 +107,13 @@ $heading-text: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
       background: $primary-color;
       color: aliceblue;
       border: none;
+      cursor: pointer;
+      transition: ease-in 0.3s;
+    }
+
+    button:hover {
+      color: $primary-color;
+      background: aliceblue;
     }
   }
 }
